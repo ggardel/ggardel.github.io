@@ -1,0 +1,526 @@
+/* selected link */
+
+/*Sakura animation using WebGL. No images are used. The framerate might be slow or the demo might not play at all in some older systems so you can watch this video: http://www.screenr.com/BFZ8. Let me make it clear that I did not make this and just thought is was very cool and wanted to share it.
+*/
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
+/*Slide about*/
+/*.slide {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.slide.ng-enter,
+.slide.ng-leave {
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.slide.ng-enter {
+    left: 100%;
+}
+.slide.ng-enter-active {
+    left: 0;
+}
+.slide.ng-leave {
+    left: 0;
+}
+.slide.ng-leave-active {
+    left: -100%;
+}*/
+
+/*classe pop ng animate*/
+/*.pop {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.pop.ng-enter,
+.pop.ng-leave {
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.pop.ng-enter {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+.pop.ng-enter-active,
+.pop.ng-leave,
+.pop.ng-leave-active {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+.pop.ng-leave-active {}*/
+
+  /*classe flip ng animate*/
+  /*.content {
+	-webkit-transition: -webkit-transform 1s;
+	-webkit-perspective: 600px;
+}
+.content .flip {
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+	-webkit-transition: all 1s ease-in-out;
+}
+.content .flip.ng-enter {
+    -webkit-transform: rotateY(-180deg);
+}
+.content .flip.ng-enter-active {
+	-webkit-transform: rotateY(0deg);
+}
+.content .flip.ng-leave {
+	-webkit-transform: rotateY(0deg);
+}
+.content .flip.ng-leave-active {
+	-webkit-transform: rotateY(180deg);
+}*/
+
+/*classe fade ng animate*/
+/*.fade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    opacity: 1;
+}
+.fade.ng-enter,
+.fade.ng-leave {
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.fade.ng-enter {
+    opacity: 0;
+}
+.fade.ng-enter-active {
+    opacity: 1;
+}
+.fade.ng-leave {
+    opacity: 1;
+}
+.fade.ng-leave-active {
+    opacity: 0;
+}*/
+
+
+/*backg welcome*/
+a {
+    color: #f1ddc7;
+    text-decoration: none;
+}
+body {
+    padding:0;
+    margin:0;
+    overflow:hidden;
+	  height: 600px;
+}
+canvas {
+    padding:0;
+    margin:0;
+}
+
+#menu {
+  padding: 10px 40px 10px 40px;
+
+}
+
+#bgImg {
+  width: 1440px;
+  height: 830px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 20px;
+}
+
+#bgImgwelcome {
+  width: 1440px;
+  height: 830px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 20px;
+}
+
+.about {
+  margin-top: 80px;
+  color: white;
+}
+
+.aboutbtn {
+  background-color: transparent;
+  border-color: rgba(255, 0, 0, 0);
+  font-size: 40px;
+  text-shadow: 2px 2px 4px #213ee0;;
+  padding: 10px 10px 10px 10px;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  margin-top: 80px;
+  margin-left: 60px;
+  border-radius: 20px;
+
+}
+.btnBox {
+
+}
+
+.boxProject {
+    text-align: center;
+    color: whitesmoke;
+    /* text-align: justify; */
+    font-size: 18px;
+    padding-right: 30px;
+    padding-bottom: 40px;
+    margin-top: -20px;
+    padding-top: 12px;
+
+}
+
+.skills {
+  position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(25, 24, 24, 0.94);
+}
+
+.skillBox {
+  height: auto;
+    width: 900px;
+    margin-top: 100px;
+    margin-left: 250px;
+    /*border-color: rgb(137, 137, 148);*/
+    border-radius: 40px;
+    padding-top: 50px;
+    padding-left: 30px;
+    font-size: 25px;
+    font-family: 'Oxygen', sans-serif;
+    /* border-bottom-style: double; */
+    /*border-style: double;
+    background-color: rgba(158, 158, 158, 0.36);
+    box-shadow: lightgray;*/
+    color: #00BCD4;
+    text-shadow: 2px 2px 1px #5f5c5c;
+  -webkit-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+}
+
+.skills.ng-hide {
+  opacity:0;
+  /* transform: scale(0.8); */
+}
+.skillList {
+  text-decoration: underline;
+  color:white;
+
+}
+#ulList {
+list-style-type: none;
+font-family: 'Oxygen', sans-serif;
+}
+.topright {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 22px;
+    color: white;
+}
+.icon {
+  height: 120px;
+  width: auto;
+}
+
+.educ {
+  position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(25, 24, 24, 0.94);
+}
+.edu.ng-hide {
+  opacity:0;
+  /* transform: scale(0.8); */
+}
+.educBox {
+  height: auto;
+    width: 900px;
+    margin-top: 100px;
+    margin-left: 250px;
+    /*border-color: rgb(137, 137, 148);*/
+    border-radius: 40px;
+    padding-top: 50px;
+    padding-left: 30px;
+    font-size: 25px;
+    font-family: 'Oxygen', sans-serif;
+    /* border-bottom-style: double; */
+    /*border-style: double;
+    background-color: rgba(158, 158, 158, 0.36);
+    box-shadow: lightgray;*/
+    color: #00BCD4;
+    text-shadow: 2px 2px 1px #5f5c5c;
+  -webkit-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+}
+.eduText {
+  width: 500px;
+  font-size: 20px;
+    color: wheat;
+    margin-left: -80px;
+    text-align: justify;
+    font-family: 'Oxygen', sans-serif;
+
+}
+.eduBorder {
+  border-top: transparent;
+  border-width: thin;
+  border-style: double;
+  border-bottom-color: whitesmoke;
+  border-left: transparent;
+  border-right: transparent;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+   /*end of about page*/
+
+ /*Contact page*/
+
+ #email {
+   padding-top: 40px;
+   padding-right: 120px;
+ }
+.borderContact {
+    text-align: center;
+    padding-top: 50px;
+    border-bottom-color: whitesmoke;
+    border-bottom-style: double;
+    padding-bottom: 20px;
+    border-radius: 40px;
+    border-bottom-width: medium;
+}
+
+/*end of contact*/
+/*div.name {
+
+  position:fixed;
+  left:300px;
+  top:300px;
+  color: white;
+  font-family: 'Bad Script', cursive;
+  font-size: 60px;
+
+}
+
+div.name:hover{
+    text-shadow: 0px 0px 20px #ccc;
+
+}*/
+
+/*div.btnbg {
+    position:fixed;
+    left:0;
+    top:0;
+    box-shadow: 0px 0px 15px #ccc;
+}
+div.btnbg:hover{
+    text-shadow: 0px 0px 3px #ccc;
+    box-shadow: 0px 0px 20px #ccc;
+}*/
+
+* {
+   margin: 0px;
+   padding: 0px;
+   font-weight: 200;
+   /*font-family: helvetica neue, helvetica, arial, sans-serif;
+  -webkit-font-smoothing: antialiased;*/
+   font-family: 'Bad Script',antialiased cursive;
+}
+
+a {color: #f1ddc7; text-decoration: none;}
+a:hover {color: #f1ddc7; text-decoration: none;}
+
+body {
+   background: #fafafa;
+}
+
+.containername {
+   width: 200%;
+   height: 100px;
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   margin-left: -15%;
+   margin-top: -20px;
+}
+
+/*p {
+   float: left;
+   line-height: 100px;
+   font-size: 200%;
+   color: #888;
+}*/
+
+.scroller {
+   height: 100px;
+   line-height: 100px;
+   float: left;
+   margin-left: 10px;
+   overflow: hidden;
+}
+
+.scroller span {
+   display: block;
+   font-size: 400%;
+   color: rgb(231, 192, 167);
+}
+
+.scroller .inner {
+   -webkit-animation: scroll 10s 1 ease-out;
+   -moz-animation: scroll 10s 1 ease-out;
+   animation: scroll 10s 1 ease-out;
+   -webkit-animation-fill-mode: forwards;
+   -moz-animation-fill-mode: forwards;
+   animation-fill-mode: forwards;
+}
+
+
+.blue {
+   -webkit-animation: color 0.25s 1 linear;
+   -moz-animation: color 0.25s 1 linear;
+   animation: color 0.25s 1 linear;
+
+      -webkit-animation-delay: 8s;
+   -moz-animation-delay: 8s;
+   animation-delay: 8s;
+
+      -webkit-animation-fill-mode: forwards;
+   -moz-animation-fill-mode: forwards;
+   animation-fill-mode: forwards;
+
+}
+
+
+.blueb {
+   -webkit-animation: color 0.25s 1 linear;
+   -moz-animation: color 0.25s 1 linear;
+   animation: color 0.25s 1 linear;
+
+         -webkit-animation-delay: 8.25s;
+   -moz-animation-delay: 8.25s;
+   animation-delay: 8.25s;
+
+      -webkit-animation-fill-mode: forwards;
+   -moz-animation-fill-mode: forwards;
+   animation-fill-mode: forwards;
+}
+
+
+@-webkit-keyframes color {
+   0%  {color: rgb(231, 192, 167);}
+   100% {color: #f1ddc7;}
+}
+
+@-moz-keyframes color {
+   0%  {color: #f1ddc7;}
+   100% {color:#f1ddc7;}
+}
+
+@keyframes color {
+   0%  {color: #f1ddc7;}
+   100% {color: #f1ddc7;   text-shadow: 0px 0px 20px #ccc;}
+}
+
+
+
+
+
+
+
+
+
+
+
+@-webkit-keyframes scroll {
+   11%  {margin-top: 0px;}
+   22%  {margin-top: 0px;}
+   33%  {margin-top: -100px;}
+   44%  {margin-top: -100px;}
+   55%  {margin-top: -200px;}
+   66%  {margin-top: -200px;}
+   77%  {margin-top: -300px;}
+   88%  {margin-top: -300px;}
+   100% {margin-top: -300px;}
+}
+
+@-moz-keyframes scroll {
+   11%  {margin-top: 0px;}
+   22%  {margin-top: 0px;}
+   33%  {margin-top: -100px;}
+   44%  {margin-top: -100px;}
+   55%  {margin-top: -200px;}
+   66%  {margin-top: -200px;}
+   77%  {margin-top: -300px;}
+   88%  {margin-top: -300px;}
+   100% {margin-top: -300px;}
+}
+
+@keyframes scroll {
+   11%  {margin-top: 0px;}
+   22%  {margin-top: 0px;}
+   33%  {margin-top: -100px;}
+   44%  {margin-top: -100px;}
+   55%  {margin-top: -200px;}
+   66%  {margin-top: -200px;}
+   77%  {margin-top: -300px;}
+   88%  {margin-top: -300px;}
+   100% {margin-top: -300px;}
+}

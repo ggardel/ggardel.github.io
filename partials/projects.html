@@ -1,0 +1,14 @@
+
+<div id="bgImg" style="background-image: url(http://i.imgur.com/DYe3NAc.jpg);">
+</br>
+</br>
+  <div class="col-md-12"  >
+   	<div class="col-md-6" class="project" ng-repeat="project in projects.projects">
+       <div class="Content boxProject"style="overflow: scroll;">
+           <h3><a style="color:wheat;"href="{{project.link}}">{{project.title}}</a></h3>
+				   <img ng-src="{{project.sample}}" style="height: 200px; width:auto;" alt="">
+				   <p style="color:white; padding-top:15px; text-align: center;font-size:12px; font-family: 'Oxygen', sans-serif;">{{project.description}}</p>
+       </div>
+     </div>
+   </div>
+</div>
