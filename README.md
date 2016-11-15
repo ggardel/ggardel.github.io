@@ -8,6 +8,5 @@ You can visti my Portfolio at:
 https://ggardel.github.io
 
 
-http://i.imgur.com/KUmAirWm.jpg
 
 
