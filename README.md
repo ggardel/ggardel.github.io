@@ -1,9 +1,11 @@
 # ggardel.github.io
 
-This portfolio now (2017)is included as a Project at my new Website/Portfolio/Blog and more... 
+# PS:This portfolio* now (2017) is included as a Project at my new Website/Portfolio/Blog and more... 
   visit here:  www.gustdev.com
 
-This is a SPA Portfolio built with AngularJS, JavaScript, JQuery and Bootstrap.
+
+
+This is a SPA Portfolio* built with AngularJS, JavaScript, JQuery and Bootstrap.
 You can visti my Portfolio at: 
 
 https://ggardel.github.io
