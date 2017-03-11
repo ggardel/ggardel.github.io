@@ -1,7 +1,7 @@
 # ggardel.github.io
 
-# PS:This portfolio* now (2017) is included as a Project at my new Website/Portfolio/Blog and more... 
-  visit here:  www.gustdev.com
+# PS:This portfolio*(2017) is now included as a Project at my new Website/Portfolio/Blog and more... 
+  visit here my new Portfolio Website:  www.gustdev.com
 
 
 
